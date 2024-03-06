@@ -4,3 +4,4 @@ function signUpUser(firstName, lastName) {
         console.log(`Promise {{firstName: ${firstName}, lastName: ${lastName}}}`);
     });
 }
+export default signUpUser;
