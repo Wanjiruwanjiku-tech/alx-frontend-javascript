@@ -13,3 +13,6 @@ function getFullResponseFromAPI(success) {
 }
 getFullResponseFromAPI().then(value => console.log(value))
                         .catch(error => console.error(error))
+
+// export
+export default getFullResponseFromAPI;
