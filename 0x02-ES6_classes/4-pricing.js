@@ -1,4 +1,5 @@
 import Currency from './3-currency';
+
 export default class Pricing {
     constructor(amount, currency) {
         this.amount = amount;
@@ -24,7 +25,7 @@ export default class Pricing {
         }
     }
     get currency() {
-        reurn this._currency;
+        return this._currency;
     }
     
     displayFullPrice() {
@@ -36,8 +37,7 @@ export default class Pricing {
         if (typeof amount !== 'number' || typeof conversionRate !== 'number') {
             throw new TypeError('Amount and Conversion rate must be numbers')
         } else {
-            let result = amount * conversionRate;
-            return result;
+            return amount * conversionRate;
         }
     }
 }
