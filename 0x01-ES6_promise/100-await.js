@@ -20,3 +20,4 @@ async function asyncUploadUser() {
     return response;
 
 }
+export default asyncUploadUser;
