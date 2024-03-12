@@ -2,17 +2,14 @@
 
 export default function createInt8TypedArray(length, position, value) {
     // If adding value is impossible throw an error
-    let buffer;
     if (position < 0 || position >= length) {
         throw new Error('Position outside range');
     } else {
-        // create a new array buffer of the specified length
-        buffer = new ArrayBuffer(length);
-        // create a new Int8Array view on the buffer
-        let view = new Int8Array(buffer);
-        // set the value at the specified position
-        veiw[position] = value;
-
-        return buffer;
+        const newBuffer = new ArrayBuffer(length);
+        const newView = new DataView(newBuffer, 0, length);
+        const newArray = new Int8Array(newBuffer);
+        newArray[position] = value;
+        
+        return newView;
     }
 }

@@ -4,12 +4,10 @@ export default function updateUniqueItems(myMap) {
     if (!(myMap instanceof Map)){
         throw new Error('Cannot process');
     } else {
-        // Iterate over each item in map
-        for (let [key, value] of myMap) {
-            if (value === 1){
-                myMap.set(key, 100);
+        myMap.forEach((value, key) => {
+            if (value === 1) {
+              myMap.set(key, 100);
             }
-        }
-        return myMap;
+          });
     }
 }
